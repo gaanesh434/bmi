@@ -1,0 +1,30 @@
+const btn = document.querySelector(".btn");
+
+const userInput = document.querySelector('.guess');
+
+const para = document.createElement('p');
+
+const random = Math.floor(Math.random() * 100) + 1;
+
+btn.addEventListener('click',function(){
+    
+    const userinput = parseInt(userInput.value);
+    
+    if (userinput <= 0 || userInput.value === "" || isNaN(userinput)) { 
+       alert("Eneter a valid value");
+       return;
+   } 
+   if(userInput===random){
+       para.innerText = "Congrats u have won the game";
+       btn.disabled = true;
+   }
+   else if(userInput<random){
+       para.innerText = "your guess was off give it a try again";
+   }
+   else{
+       para.innerText = "try again";
+   }
+   document.body.appendChild(para);
+   
+    userInput.value = '';
+});
