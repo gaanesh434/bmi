@@ -1,0 +1,4 @@
+Remove-Item * -Recurse -Force
+npm create vite@latest new-react-app --template react
+cd new-react-app
+npm run dev
