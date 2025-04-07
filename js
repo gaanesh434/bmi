@@ -33,4 +33,4 @@ form.addEventListener('submit',function(e){
 
     results.innerHTML = `your bmi index is as follows ${bmi.toFixed(2)} and the category is as follows ${category}`
     
-});
+}); //
